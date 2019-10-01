@@ -4,7 +4,7 @@ location = input('Enter the location:')
 url = \
     'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=' \
     + location \
-    + '&inputtype=textquery&fields=geometry&key=AIzaSyA5mnz61Aj1WoqRagpSy9IlR6pyXGVNiSY'
+    + '&inputtype=textquery&fields=geometry&key=put your Google ApI Key'
 data = json.loads(requests.get(url).content)
 for candidate in data['candidates']:
     lat = candidate['geometry']['location']['lat']
